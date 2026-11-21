@@ -208,6 +208,12 @@ def transcribir(wav, modelo, idioma, tmp):
             unidos[-1] = (unidos[-1][0], b, unidos[-1][2] + " " + t)
         else:
             unidos.append((a, b, t))
+    # un subtitulo se quita antes de que entre el siguiente (si no, se pintan uno encima de otro)
+    for i in range(len(unidos) - 1):
+        a, b, t = unidos[i]
+        tope = unidos[i + 1][0] - 0.04
+        if b > tope:
+            unidos[i] = (a, max(a + 0.04, tope), t)
     return unidos
 
 

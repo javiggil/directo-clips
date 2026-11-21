@@ -1,0 +1,7 @@
+pruebas/
+buf/
+.venv/
+clips/
+modelos/
+__pycache__/
+.DS_Store

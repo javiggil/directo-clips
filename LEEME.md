@@ -87,6 +87,7 @@ En un Mac con chip de Apple, con yt-dlp 2026.08.19, ffmpeg 8.1, whisper.cpp 1.9.
 
 - Twitch, canal kaicenat, directo grande con chat activo: 7 minutos de vigilancia, umbral bajo (`--k 1.0`), 2 clips. Comprobados con `ffprobe`: 1080x1920, vídeo H.264 y audio AAC, 30 s y 29,7 s. Miradas tres imágenes del primer clip y otras tres del segundo: se ve el directo entero sobre fondo desenfocado y los subtítulos se leen bien. Tardaron 33,7 y 31,4 s desde el pico.
 - YouTube, directo 24/7 de Lofi Girl: 5 minutos, 1 clip de 30 s, 1080x1920 con audio. El chat de YouTube se lee sin clave. Su audio es solo música, así que no hay subtítulos (correcto, no hay nada que transcribir).
+- Una copia recién clonada de esta carpeta, con el modelo en `modelos/`, Twitch, canal caseoh_: 4 minutos con `--k 1.0` sin ningún pico (0 clips, correcto: el chat iba bajando) y 3 minutos con `--k 0.3`, 1 clip de 30 s, 1080x1920, listo a los 35,6 s del pico. Revisados los subtítulos del clip entero, una imagen cada medio segundo: ninguno pisa al siguiente.
 - Modo ensayo de la publicación: imprime las llamadas que haría.
 
 ## Qué NO se ha probado
